@@ -51,13 +51,11 @@ import static com.hankcs.hanlp.utility.Predefine.logger;
  *
  * @author hankcs
  */
-public class HanLP
-{
+public class HanLP {
     /**
      * 库的全局配置，既可以用代码修改，也可以通过hanlp.properties配置（按照 变量名=值 的形式）
      */
-    public static final class Config
-    {
+    public static final class Config {
         /**
          * 开发模式
          */
@@ -65,115 +63,115 @@ public class HanLP
         /**
          * 核心词典路径
          */
-        public static String CoreDictionaryPath = "data/dictionary/CoreNatureDictionary.txt";
+        public static String CoreDictionaryPath = "CoreDictionaryPath";
         /**
          * 核心词典词性转移矩阵路径
          */
-        public static String CoreDictionaryTransformMatrixDictionaryPath = "data/dictionary/CoreNatureDictionary.tr.txt";
+        public static String CoreDictionaryTransformMatrixDictionaryPath = "CoreDictionaryTransformMatrixDictionaryPath";
         /**
          * 用户自定义词典路径
          */
-        public static String CustomDictionaryPath[] = new String[]{"data/dictionary/custom/CustomDictionary.txt"};
+        public static String[] CustomDictionaryPath = new String[]{"CustomDictionaryPath"};
         /**
          * 2元语法词典路径
          */
-        public static String BiGramDictionaryPath = "data/dictionary/CoreNatureDictionary.ngram.txt";
+        public static String BiGramDictionaryPath = "BiGramDictionaryPath";
 
         /**
          * 停用词词典路径
          */
-        public static String CoreStopWordDictionaryPath = "data/dictionary/stopwords.txt";
+        public static String CoreStopWordDictionaryPath = "CoreStopWordDictionaryPath";
         /**
          * 同义词词典路径
          */
-        public static String CoreSynonymDictionaryDictionaryPath = "data/dictionary/synonym/CoreSynonym.txt";
+        public static String CoreSynonymDictionaryDictionaryPath = "CoreSynonymDictionaryDictionaryPath";
         /**
          * 人名词典路径
          */
-        public static String PersonDictionaryPath = "data/dictionary/person/nr.txt";
+        public static String PersonDictionaryPath = "PersonDictionaryPath";
         /**
          * 人名词典转移矩阵路径
          */
-        public static String PersonDictionaryTrPath = "data/dictionary/person/nr.tr.txt";
+        public static String PersonDictionaryTrPath = "PersonDictionaryTrPath";
         /**
          * 地名词典路径
          */
-        public static String PlaceDictionaryPath = "data/dictionary/place/ns.txt";
+        public static String PlaceDictionaryPath = "PlaceDictionaryPath";
         /**
          * 地名词典转移矩阵路径
          */
-        public static String PlaceDictionaryTrPath = "data/dictionary/place/ns.tr.txt";
+        public static String PlaceDictionaryTrPath = "PlaceDictionaryTrPath";
         /**
          * 地名词典路径
          */
-        public static String OrganizationDictionaryPath = "data/dictionary/organization/nt.txt";
+        public static String OrganizationDictionaryPath = "OrganizationDictionaryPath";
         /**
          * 地名词典转移矩阵路径
          */
-        public static String OrganizationDictionaryTrPath = "data/dictionary/organization/nt.tr.txt";
+        public static String OrganizationDictionaryTrPath = "OrganizationDictionaryTrPath";
         /**
          * 简繁转换词典根目录
          */
-        public static String tcDictionaryRoot = "data/dictionary/tc/";
+        public static String tcDictionaryRoot = "tcDictionaryRoot";
 
         /**
          * 拼音词典路径
          */
-        public static String PinyinDictionaryPath = "data/dictionary/pinyin/pinyin.txt";
+        public static String PinyinDictionaryPath = "PinyinDictionaryPath";
 
         /**
          * 音译人名词典
          */
-        public static String TranslatedPersonDictionaryPath = "data/dictionary/person/nrf.txt";
+        public static String TranslatedPersonDictionaryPath = "TranslatedPersonDictionaryPath";
 
         /**
          * 日本人名词典路径
          */
-        public static String JapanesePersonDictionaryPath = "data/dictionary/person/nrj.txt";
+        public static String JapanesePersonDictionaryPath = "JapanesePersonDictionaryPath";
 
         /**
          * 字符类型对应表
          */
-        public static String CharTypePath = "data/dictionary/other/CharType.bin";
+        public static String CharTypePath = "CharTypePath";
 
         /**
          * 字符正规化表（全角转半角，繁体转简体）
          */
-        public static String CharTablePath = "data/dictionary/other/CharTable.txt";
+        public static String CharTablePath = "CharTablePath";
 
         /**
          * 词性标注集描述表，用来进行中英映射（对于Nature词性，可直接参考Nature.java中的注释）
          */
-        public static String PartOfSpeechTagDictionary = "data/dictionary/other/TagPKU98.csv";
+        public static String PartOfSpeechTagDictionary = "PartOfSpeechTagDictionary";
 
         /**
          * 词-词性-依存关系模型
          */
-        public static String WordNatureModelPath = "data/model/dependency/WordNature.txt";
+        public static String WordNatureModelPath = "WordNatureModelPath";
 
         /**
          * 最大熵-依存关系模型
          */
-        public static String MaxEntModelPath = "data/model/dependency/MaxEntModel.txt";
+        public static String MaxEntModelPath = "MaxEntModelPath";
         /**
          * 神经网络依存模型路径
          */
-        public static String NNParserModelPath = "data/model/dependency/NNParserModel.txt";
+        public static String NNParserModelPath = "NNParserModelPath";
         /**
          * CRF分词模型
          */
         // @deprecated 已废弃，请使用{@link com.hankcs.hanlp.model.crf.CRFLexicalAnalyzer}。未来版本将不再发布该模型，并删除配置项
-        public static String CRFSegmentModelPath = "data/model/segment/CRFSegmentModel.txt";
+        public static String CRFSegmentModelPath = "CRFSegmentModelPath";
         /**
          * HMM分词模型
          */
-        public static String HMMSegmentModelPath = "data/model/segment/HMMSegmentModel.bin";
+        public static String HMMSegmentModelPath = "HMMSegmentModelPath";
         /**
          * CRF依存模型
          *
          * @deprecated 已废弃，请使用{@link NeuralNetworkDependencyParser}
          */
-        public static String CRFDependencyModelPath = "data/model/dependency/CRFDependencyModelMini.txt";
+        public static String CRFDependencyModelPath = "CRFDependencyModelPath";
         /**
          * CRF分词模型
          */
@@ -189,15 +187,15 @@ public class HanLP
         /**
          * 感知机分词模型
          */
-        public static String PerceptronCWSModelPath = "data/model/perceptron/pku199801/cws.bin";
+        public static String PerceptronCWSModelPath = "PerceptronCWSModelPath";
         /**
          * 感知机词性标注模型
          */
-        public static String PerceptronPOSModelPath = "data/model/perceptron/pku199801/pos.bin";
+        public static String PerceptronPOSModelPath = "PerceptronPOSModelPath";
         /**
          * 感知机命名实体识别模型
          */
-        public static String PerceptronNERModelPath = "data/model/perceptron/pku199801/ner.bin";
+        public static String PerceptronNERModelPath = "PerceptronNERModelPath";
         /**
          * 分词结果是否展示词性
          */
@@ -212,23 +210,22 @@ public class HanLP
          */
         public static IIOAdapter IOAdapter;
 
-        static
-        {
+        static {
             // 自动读取配置
             Properties p = new Properties();
-            try
-            {
+            try {
                 ClassLoader loader = Thread.currentThread().getContextClassLoader();
-                if (loader == null)
-                {  // IKVM (v.0.44.0.5) doesn't set context classloader
+                if (loader == null) {  // IKVM (v.0.44.0.5) doesn't set context classloader
                     loader = HanLP.Config.class.getClassLoader();
                 }
                 p.load(new InputStreamReader(Predefine.HANLP_PROPERTIES_PATH == null ?
-                                                 loader.getResourceAsStream("hanlp.properties") :
-                                                 new FileInputStream(Predefine.HANLP_PROPERTIES_PATH)
+                    loader.getResourceAsStream("hanlp.properties") :
+                    new FileInputStream(Predefine.HANLP_PROPERTIES_PATH)
                     , "UTF-8"));
                 String root = p.getProperty("root", "").replaceAll("\\\\", "/");
-                if (root.length() > 0 && !root.endsWith("/")) root += "/";
+                if (root.length() > 0 && !root.endsWith("/")) {
+                    root += "/";
+                }
                 CoreDictionaryPath = root + p.getProperty("CoreDictionaryPath", CoreDictionaryPath);
                 CoreDictionaryTransformMatrixDictionaryPath = root + p.getProperty("CoreDictionaryTransformMatrixDictionaryPath", CoreDictionaryTransformMatrixDictionaryPath);
                 BiGramDictionaryPath = root + p.getProperty("BiGramDictionaryPath", BiGramDictionaryPath);
@@ -238,25 +235,22 @@ public class HanLP
                 PersonDictionaryTrPath = root + p.getProperty("PersonDictionaryTrPath", PersonDictionaryTrPath);
                 String[] pathArray = p.getProperty("CustomDictionaryPath", "data/dictionary/custom/CustomDictionary.txt").split(";");
                 String prePath = root;
-                for (int i = 0; i < pathArray.length; ++i)
-                {
-                    if (pathArray[i].startsWith(" "))
-                    {
+                for (int i = 0; i < pathArray.length; ++i) {
+                    if (pathArray[i].startsWith(" ")) {
                         pathArray[i] = prePath + pathArray[i].trim();
-                    }
-                    else
-                    {
+                    } else {
                         pathArray[i] = root + pathArray[i];
                         int lastSplash = pathArray[i].lastIndexOf('/');
-                        if (lastSplash != -1)
-                        {
+                        if (lastSplash != -1) {
                             prePath = pathArray[i].substring(0, lastSplash + 1);
                         }
                     }
                 }
                 CustomDictionaryPath = pathArray;
                 tcDictionaryRoot = root + p.getProperty("tcDictionaryRoot", tcDictionaryRoot);
-                if (!tcDictionaryRoot.endsWith("/")) tcDictionaryRoot += '/';
+                if (!tcDictionaryRoot.endsWith("/")) {
+                    tcDictionaryRoot += '/';
+                }
                 PinyinDictionaryPath = root + p.getProperty("PinyinDictionaryPath", PinyinDictionaryPath);
                 TranslatedPersonDictionaryPath = root + p.getProperty("TranslatedPersonDictionaryPath", TranslatedPersonDictionaryPath);
                 JapanesePersonDictionaryPath = root + p.getProperty("JapanesePersonDictionaryPath", JapanesePersonDictionaryPath);
@@ -282,52 +276,37 @@ public class HanLP
                 ShowTermNature = "true".equals(p.getProperty("ShowTermNature", "true"));
                 Normalization = "true".equals(p.getProperty("Normalization", "false"));
                 String ioAdapterClassName = p.getProperty("IOAdapter");
-                if (ioAdapterClassName != null)
-                {
-                    try
-                    {
+                if (ioAdapterClassName != null) {
+                    try {
                         Class<?> clazz = Class.forName(ioAdapterClassName);
                         Constructor<?> ctor = clazz.getConstructor();
                         Object instance = ctor.newInstance();
                         if (instance != null) IOAdapter = (IIOAdapter) instance;
-                    }
-                    catch (ClassNotFoundException e)
-                    {
+                    } catch (ClassNotFoundException e) {
                         logger.warning(String.format("找不到IO适配器类： %s ，请检查第三方插件jar包", ioAdapterClassName));
-                    }
-                    catch (NoSuchMethodException e)
-                    {
+                    } catch (NoSuchMethodException e) {
                         logger.warning(String.format("工厂类[%s]没有默认构造方法，不符合要求", ioAdapterClassName));
-                    }
-                    catch (SecurityException e)
-                    {
+                    } catch (SecurityException e) {
                         logger.warning(String.format("工厂类[%s]默认构造方法无法访问，不符合要求", ioAdapterClassName));
-                    }
-                    catch (Exception e)
-                    {
+                    } catch (Exception e) {
                         logger.warning(String.format("工厂类[%s]构造失败：%s\n", ioAdapterClassName, TextUtility.exceptionToString(e)));
                     }
                 }
-            }
-            catch (Exception e)
-            {
+            } catch (Exception e) {
                 StringBuilder sbInfo = new StringBuilder("========Tips========\n请将hanlp.properties放在下列目录：\n"); // 打印一些友好的tips
                 String classPath = (String) System.getProperties().get("java.class.path");
-                if (classPath != null)
-                {
-                    for (String path : classPath.split(File.pathSeparator))
-                    {
-                        if (new File(path).isDirectory())
-                        {
+                if (classPath != null) {
+                    for (String path : classPath.split(File.pathSeparator)) {
+                        if (new File(path).isDirectory()) {
                             sbInfo.append(path).append('\n');
                         }
                     }
                 }
                 sbInfo.append("Web项目则请放到下列目录：\n" +
-                                  "Webapp/WEB-INF/lib\n" +
-                                  "Webapp/WEB-INF/classes\n" +
-                                  "Appserver/lib\n" +
-                                  "JRE/lib\n");
+                    "Webapp/WEB-INF/lib\n" +
+                    "Webapp/WEB-INF/classes\n" +
+                    "Appserver/lib\n" +
+                    "JRE/lib\n");
                 sbInfo.append("并且编辑root=PARENT/path/to/your/data\n");
                 sbInfo.append("现在HanLP将尝试从").append(System.getProperties().get("user.dir")).append("读取data……");
                 logger.severe("没有找到hanlp.properties，可能会导致找不到data\n" + sbInfo);
@@ -337,8 +316,7 @@ public class HanLP
         /**
          * 开启调试模式(会降低性能)
          */
-        public static void enableDebug()
-        {
+        public static void enableDebug() {
             enableDebug(true);
         }
 
@@ -347,15 +325,11 @@ public class HanLP
          *
          * @param enable
          */
-        public static void enableDebug(boolean enable)
-        {
+        public static void enableDebug(boolean enable) {
             DEBUG = enable;
-            if (DEBUG)
-            {
+            if (DEBUG) {
                 logger.setLevel(Level.ALL);
-            }
-            else
-            {
+            } else {
                 logger.setLevel(Level.OFF);
             }
         }
@@ -364,8 +338,7 @@ public class HanLP
     /**
      * 工具类，不需要生成实例
      */
-    private HanLP()
-    {
+    private HanLP() {
     }
 
     /**
@@ -374,8 +347,7 @@ public class HanLP
      * @param traditionalChineseString 繁体中文
      * @return 简体中文
      */
-    public static String convertToSimplifiedChinese(String traditionalChineseString)
-    {
+    public static String convertToSimplifiedChinese(String traditionalChineseString) {
         return TraditionalChineseDictionary.convertToSimplifiedChinese(traditionalChineseString.toCharArray());
     }
 
@@ -385,8 +357,7 @@ public class HanLP
      * @param simplifiedChineseString 简体中文
      * @return 繁体中文
      */
-    public static String convertToTraditionalChinese(String simplifiedChineseString)
-    {
+    public static String convertToTraditionalChinese(String simplifiedChineseString) {
         return SimplifiedChineseDictionary.convertToTraditionalChinese(simplifiedChineseString.toCharArray());
     }
 
@@ -396,8 +367,7 @@ public class HanLP
      * @param s 简体中文
      * @return 繁体中文(大陆标准)
      */
-    public static String s2t(String s)
-    {
+    public static String s2t(String s) {
         return HanLP.convertToTraditionalChinese(s);
     }
 
@@ -407,8 +377,7 @@ public class HanLP
      * @param t 繁体中文(大陆标准)
      * @return 简体中文
      */
-    public static String t2s(String t)
-    {
+    public static String t2s(String t) {
         return HanLP.convertToSimplifiedChinese(t);
     }
 
@@ -418,8 +387,7 @@ public class HanLP
      * @param s 簡體
      * @return 臺灣正體
      */
-    public static String s2tw(String s)
-    {
+    public static String s2tw(String s) {
         return SimplifiedToTaiwanChineseDictionary.convertToTraditionalTaiwanChinese(s);
     }
 
@@ -429,8 +397,7 @@ public class HanLP
      * @param tw 臺灣正體
      * @return 簡體
      */
-    public static String tw2s(String tw)
-    {
+    public static String tw2s(String tw) {
         return TaiwanToSimplifiedChineseDictionary.convertToSimplifiedChinese(tw);
     }
 
@@ -440,8 +407,7 @@ public class HanLP
      * @param s 簡體
      * @return 香港繁體
      */
-    public static String s2hk(String s)
-    {
+    public static String s2hk(String s) {
         return SimplifiedToHongKongChineseDictionary.convertToTraditionalHongKongChinese(s);
     }
 
@@ -451,8 +417,7 @@ public class HanLP
      * @param hk 香港繁體
      * @return 簡體
      */
-    public static String hk2s(String hk)
-    {
+    public static String hk2s(String hk) {
         return HongKongToSimplifiedChineseDictionary.convertToSimplifiedChinese(hk);
     }
 
@@ -462,8 +427,7 @@ public class HanLP
      * @param t 繁體
      * @return 臺灣正體
      */
-    public static String t2tw(String t)
-    {
+    public static String t2tw(String t) {
         return TraditionalToTaiwanChineseDictionary.convertToTaiwanChinese(t);
     }
 
@@ -473,8 +437,7 @@ public class HanLP
      * @param tw 臺灣正體
      * @return 繁體
      */
-    public static String tw2t(String tw)
-    {
+    public static String tw2t(String tw) {
         return TaiwanToTraditionalChineseDictionary.convertToTraditionalChinese(tw);
     }
 
@@ -484,8 +447,7 @@ public class HanLP
      * @param t 繁體
      * @return 香港繁體
      */
-    public static String t2hk(String t)
-    {
+    public static String t2hk(String t) {
         return TraditionalToHongKongChineseDictionary.convertToHongKongTraditionalChinese(t);
     }
 
@@ -495,8 +457,7 @@ public class HanLP
      * @param hk 香港繁體
      * @return 繁體
      */
-    public static String hk2t(String hk)
-    {
+    public static String hk2t(String hk) {
         return HongKongToTraditionalChineseDictionary.convertToTraditionalChinese(hk);
     }
 
@@ -506,8 +467,7 @@ public class HanLP
      * @param hk 香港繁體
      * @return 臺灣正體
      */
-    public static String hk2tw(String hk)
-    {
+    public static String hk2tw(String hk) {
         return HongKongToTaiwanChineseDictionary.convertToTraditionalTaiwanChinese(hk);
     }
 
@@ -517,8 +477,7 @@ public class HanLP
      * @param tw 臺灣正體
      * @return 香港繁體
      */
-    public static String tw2hk(String tw)
-    {
+    public static String tw2hk(String tw) {
         return TaiwanToHongKongChineseDictionary.convertToTraditionalHongKongChinese(tw);
     }
 
@@ -530,22 +489,19 @@ public class HanLP
      * @param remainNone 有些字没有拼音（如标点），是否保留它们的拼音（true用none表示，false用原字符表示）
      * @return 一个字符串，由[拼音][分隔符][拼音]构成
      */
-    public static String convertToPinyinString(String text, String separator, boolean remainNone)
-    {
+    public static String convertToPinyinString(String text, String separator, boolean remainNone) {
         List<Pinyin> pinyinList = PinyinDictionary.convertToPinyin(text, true);
         int length = pinyinList.size();
         StringBuilder sb = new StringBuilder(length * (5 + separator.length()));
         int i = 1;
-        for (Pinyin pinyin : pinyinList)
-        {
+        for (Pinyin pinyin : pinyinList) {
 
-            if (pinyin == Pinyin.none5 && !remainNone)
-            {
+            if (pinyin == Pinyin.none5 && !remainNone) {
                 sb.append(text.charAt(i - 1));
+            } else {
+                sb.append(pinyin.getPinyinWithoutTone());
             }
-            else sb.append(pinyin.getPinyinWithoutTone());
-            if (i < length)
-            {
+            if (i < length) {
                 sb.append(separator);
             }
             ++i;
@@ -559,8 +515,7 @@ public class HanLP
      * @param text 待解析的文本
      * @return 一个拼音列表
      */
-    public static List<Pinyin> convertToPinyinList(String text)
-    {
+    public static List<Pinyin> convertToPinyinList(String text) {
         return PinyinDictionary.convertToPinyin(text);
     }
 
@@ -572,17 +527,14 @@ public class HanLP
      * @param remainNone 有些字没有拼音（如标点），是否保留它们（用none表示）
      * @return 一个字符串，由[首字母][分隔符][首字母]构成
      */
-    public static String convertToPinyinFirstCharString(String text, String separator, boolean remainNone)
-    {
+    public static String convertToPinyinFirstCharString(String text, String separator, boolean remainNone) {
         List<Pinyin> pinyinList = PinyinDictionary.convertToPinyin(text, remainNone);
         int length = pinyinList.size();
         StringBuilder sb = new StringBuilder(length * (1 + separator.length()));
         int i = 1;
-        for (Pinyin pinyin : pinyinList)
-        {
+        for (Pinyin pinyin : pinyinList) {
             sb.append(pinyin.getFirstChar());
-            if (i < length)
-            {
+            if (i < length) {
                 sb.append(separator);
             }
             ++i;
@@ -596,8 +548,7 @@ public class HanLP
      * @param text 文本
      * @return 切分后的单词
      */
-    public static List<Term> segment(String text)
-    {
+    public static List<Term> segment(String text) {
         return StandardTokenizer.segment(text.toCharArray());
     }
 
@@ -608,8 +559,7 @@ public class HanLP
      *
      * @return 一个分词器
      */
-    public static Segment newSegment()
-    {
+    public static Segment newSegment() {
         return new ViterbiSegment();   // Viterbi分词器是目前效率和效果的最佳平衡
     }
 
@@ -674,8 +624,7 @@ public class HanLP
      * @param sentence 待分析的句子
      * @return CoNLL格式的依存关系树
      */
-    public static CoNLLSentence parseDependency(String sentence)
-    {
+    public static CoNLLSentence parseDependency(String sentence) {
         return NeuralNetworkDependencyParser.compute(sentence);
     }
 
@@ -686,8 +635,7 @@ public class HanLP
      * @param size 需要多少个短语
      * @return 一个短语列表，大小 <= size
      */
-    public static List<String> extractPhrase(String text, int size)
-    {
+    public static List<String> extractPhrase(String text, int size) {
         IPhraseExtractor extractor = new MutualInformationEntropyPhraseExtractor();
         return extractor.extractPhrase(text, size);
     }
@@ -699,8 +647,7 @@ public class HanLP
      * @param size 需要提取词语的数量
      * @return 一个词语列表
      */
-    public static List<WordInfo> extractWords(String text, int size)
-    {
+    public static List<WordInfo> extractWords(String text, int size) {
         return extractWords(text, size, false);
     }
 
@@ -711,8 +658,7 @@ public class HanLP
      * @param size   需要提取词语的数量
      * @return 一个词语列表
      */
-    public static List<WordInfo> extractWords(BufferedReader reader, int size) throws IOException
-    {
+    public static List<WordInfo> extractWords(BufferedReader reader, int size) throws IOException {
         return extractWords(reader, size, false);
     }
 
@@ -724,8 +670,7 @@ public class HanLP
      * @param newWordsOnly 是否只提取词典中没有的词语
      * @return 一个词语列表
      */
-    public static List<WordInfo> extractWords(String text, int size, boolean newWordsOnly)
-    {
+    public static List<WordInfo> extractWords(String text, int size, boolean newWordsOnly) {
         NewWordDiscover discover = new NewWordDiscover(4, 0.0f, .5f, 100f, newWordsOnly);
         return discover.discover(text, size);
     }
@@ -738,8 +683,7 @@ public class HanLP
      * @param newWordsOnly 是否只提取词典中没有的词语
      * @return 一个词语列表
      */
-    public static List<WordInfo> extractWords(BufferedReader reader, int size, boolean newWordsOnly) throws IOException
-    {
+    public static List<WordInfo> extractWords(BufferedReader reader, int size, boolean newWordsOnly) throws IOException {
         NewWordDiscover discover = new NewWordDiscover(4, 0.0f, .5f, 100f, newWordsOnly);
         return discover.discover(reader, size);
     }
@@ -751,8 +695,7 @@ public class HanLP
      * @param size     希望提取几个关键词
      * @return 一个列表
      */
-    public static List<String> extractKeyword(String document, int size)
-    {
+    public static List<String> extractKeyword(String document, int size) {
         return TextRankKeyword.getKeywordList(document, size);
     }
 
@@ -764,8 +707,7 @@ public class HanLP
      * @param size     需要的关键句的个数
      * @return 关键句列表
      */
-    public static List<String> extractSummary(String document, int size)
-    {
+    public static List<String> extractSummary(String document, int size) {
         return TextRankSentence.getTopSentenceList(document, size);
     }
 
@@ -777,8 +719,7 @@ public class HanLP
      * @param max_length 需要摘要的长度
      * @return 摘要文本
      */
-    public static String getSummary(String document, int max_length)
-    {
+    public static String getSummary(String document, int max_length) {
         // Parameter size in this method refers to the string length of the summary required;
         // The actual length of the summary generated may be short than the required length, but never longer;
         return TextRankSentence.getSummary(document, max_length);
@@ -792,8 +733,7 @@ public class HanLP
      * @param sentence_separator 分割目标文档时的句子分割符，正则格式， 如：[。？?！!；;]
      * @return 关键句列表
      */
-    public static List<String> extractSummary(String document, int size, String sentence_separator)
-    {
+    public static List<String> extractSummary(String document, int size, String sentence_separator) {
         return TextRankSentence.getTopSentenceList(document, size, sentence_separator);
     }
 
@@ -805,8 +745,7 @@ public class HanLP
      * @param sentence_separator 分割目标文档时的句子分割符，正则格式， 如：[。？?！!；;]
      * @return 摘要文本
      */
-    public static String getSummary(String document, int max_length, String sentence_separator)
-    {
+    public static String getSummary(String document, int max_length, String sentence_separator) {
         // Parameter size in this method refers to the string length of the summary required;
         // The actual length of the summary generated may be short than the required length, but never longer;
         return TextRankSentence.getSummary(document, max_length, sentence_separator);
