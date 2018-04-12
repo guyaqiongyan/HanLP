@@ -159,8 +159,8 @@ public class HanLP {
         public static String NNParserModelPath = "NNParserModelPath";
         /**
          * CRF分词模型
+         * @deprecated 已废弃，请使用{@link com.hankcs.hanlp.model.crf.CRFLexicalAnalyzer}。未来版本将不再发布该模型，并删除配置项
          */
-        // @deprecated 已废弃，请使用{@link com.hankcs.hanlp.model.crf.CRFLexicalAnalyzer}。未来版本将不再发布该模型，并删除配置项
         public static String CRFSegmentModelPath = "CRFSegmentModelPath";
         /**
          * HMM分词模型
@@ -175,15 +175,15 @@ public class HanLP {
         /**
          * CRF分词模型
          */
-        public static String CRFCWSModelPath = "data/model/crf/pku199801/cws.bin";
+        public static String CRFCWSModelPath = "CRFCWSModelPath";
         /**
          * CRF词性标注模型
          */
-        public static String CRFPOSModelPath = "data/model/crf/pku199801/pos.bin";
+        public static String CRFPOSModelPath = "CRFPOSModelPath";
         /**
          * CRF命名实体识别模型
          */
-        public static String CRFNERModelPath = "data/model/crf/pku199801/ner.bin";
+        public static String CRFNERModelPath = "CRFNERModelPath";
         /**
          * 感知机分词模型
          */
